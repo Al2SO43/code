@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000000, #077a81);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    background: linear-gradient(135deg, #c4dd9e 0%, #b4d9b6 100%); /* 添加渐变效果 */
+}
+
+.topBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #66CCCC;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.topBarText {
+    color: #000000;
+}
+
+.bottomBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #afd01a; /* 黄色 */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottomBarText {
+    font-size: 15px; /* 设置底部文字的字体大小 */
+}
+.bottomBarText a {
+    font-size: 15px; /* 设置链接文字的字体大小 */
+}
+  
+.links {
+    width: 100%; /* 将链接容器的宽度设置为100% */
+  display: flex; /* 将链接的容器设置为Flex布局 */
+  flex-direction: column; /* 垂直排列链接 */
+  align-items: flex-start; /* 将链接左对齐 */
+  margin-top: 10px;
+  max-height: 500px; /* 设置最大高度 */
+  overflow: auto; /* 添加滚动条 */
+}
+
+
+.link {
+    text-decoration: none;
+    color: #000000;
+    margin: 10px;
+    font-size: 18px;
+    display: block; /* 每个链接占据一行 */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(1, 6, 7, 0.566);
+  }
