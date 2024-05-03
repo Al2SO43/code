@@ -61,23 +61,25 @@ body {
 }
   
 .links {
-    width: 100%; /* 将链接容器的宽度设置为100% */
-  display: flex; /* 将链接的容器设置为Flex布局 */
-  flex-direction: column; /* 垂直排列链接 */
-  align-items: flex-start; /* 将链接左对齐 */
-  margin-top: 10px;
-  max-height: 500px; /* 设置最大高度 */
-  overflow: auto; /* 添加滚动条 */
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    word-wrap: break-word;
+    white-space: normal;
 }
-
 
 .link {
     text-decoration: none;
     color: #000000;
     margin: 10px;
     font-size: 18px;
-    display: block; /* 每个链接占据一行 */
+    max-inline-size: 95%; /* 仅限制左右方向的最大尺寸 */
 }
+
 
 .modal {
     display: none;
