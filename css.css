@@ -77,7 +77,7 @@ body {
     color: #000000;
     margin: 10px;
     font-size: 18px;
-    max-inline-size: 98%; /* 仅限制左右方向的最大尺寸 */
+    max-inline-size: 97.5%; /* 仅限制左右方向的最大尺寸 */
 }
 
 
