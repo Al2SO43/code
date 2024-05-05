@@ -14,7 +14,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
 
-
 class VideoPlayerApp:
     def __init__(self, width=500, height=300):
         self.w = width
@@ -25,7 +24,7 @@ class VideoPlayerApp:
         self.v = tk.IntVar()
         self.v.set(1)
         self.port = 'https://jx.jsonplayer.com/player/?url='
-        self.port2 = 'https://jx.2s0.cn/player/?url=' #成功概率最高
+        self.port2 = 'https://jx.2s0.cn/player/?url=' #成功概率最高,建议选择这个
         self.port3 = 'https://jx.qqwtt.com/?url='
         self.port4 = 'https://jx.xyflv.cc/?url='  
         self.port5 = 'https://jx.playerjy.com/?url=' 
@@ -37,7 +36,7 @@ class VideoPlayerApp:
         self.setup_ui()
 
     def setup_ui(self):
-        # Main Frames
+        #Main
         frame_1 = tk.Frame(self.root)
         frame_2 = tk.Frame(self.root)
         download_frame = tk.Frame(self.root)
@@ -48,37 +47,36 @@ class VideoPlayerApp:
         download_frame.pack(pady=10)
         rename_frame.pack(pady=10)
 
-        # Group Label
+        #选择通道
         group_label = tk.Label(frame_1, text='通道选择：')
         group_label.grid(row=0, column=0, padx=10, pady=10)
 
-        # Radiobutton
-        tb1 = tk.Radiobutton(frame_1, text='通道 1', variable=self.v, value=1)
+        tb1 = tk.Radiobutton(frame_1, text='通道1', variable=self.v, value=1)
         tb1.grid(row=0, column=1, padx=5)
 
-        tb2 = tk.Radiobutton(frame_1, text='通道 2', variable=self.v, value=2)
+        tb2 = tk.Radiobutton(frame_1, text='通道2', variable=self.v, value=2)
         tb2.grid(row=0, column=2, padx=5)
 
-        tb3 = tk.Radiobutton(frame_1, text='通道 3', variable=self.v, value=3)
+        tb3 = tk.Radiobutton(frame_1, text='通道3', variable=self.v, value=3)
         tb3.grid(row=0, column=3, padx=5)
 
-        tb4 = tk.Radiobutton(frame_1, text='通道 4', variable=self.v, value=4)
+        tb4 = tk.Radiobutton(frame_1, text='通道4', variable=self.v, value=4)
         tb4.grid(row=0, column=4, padx=5)
 
-        tb5 = tk.Radiobutton(frame_1, text='通道 5', variable=self.v, value=5)
+        tb5 = tk.Radiobutton(frame_1, text='通道5', variable=self.v, value=5)
         tb5.grid(row=0, column=5, padx=5)
-        # Input Label and Entry
+        #链接获取
         label = tk.Label(frame_2, text='请输入视频链接：')
         entry = tk.Entry(frame_2, textvariable=self.url, highlightcolor='Fuchsia', highlightthickness=1, width=40)
         label.grid(row=0, column=0, padx=(10, 0))
         entry.grid(row=0, column=1)
 
-        # Play Button
+        #播放按钮
         play = tk.Button(frame_2, text='播放', font=('楷体', 12), fg='Purple', width=8, height=1,
                          command=self.video_play)
         play.grid(row=0, column=2, padx=(10, 0))
 
-        # Download Buttons and Progress Bar
+        #下载按钮(成功率过低,请谨慎使用)
         download_button = tk.Button(download_frame, text='下载(只支持b站和通道1)', font=('楷体', 12), fg='Green', width=25,
                                     height=1,
                                     command=self.download_video)
@@ -95,13 +93,13 @@ class VideoPlayerApp:
         choose_dir_button.grid(row=0, column=2, padx=10)
         cancel_button.grid(row=0, column=3, padx=10)
 
-        # Status Label and Progress Bar
+        #状态和进度
         self.status_label = tk.Label(self.root, text='', fg='blue')
         self.status_label.pack(pady=0)
         self.progress_bar = ttk.Progressbar(self.root, mode='indeterminate')
         self.progress_bar.pack(fill='x', padx=10, pady=5)
 
-        # Rename Label and Entry
+        #视频重命名
         rename_label = tk.Label(rename_frame, text='请输入视频新名称：')
         rename_entry = tk.Entry(rename_frame, textvariable=self.new_name, highlightcolor='Fuchsia',
                                 highlightthickness=1, width=51)
@@ -112,10 +110,10 @@ class VideoPlayerApp:
         self.status_label.config(text=message)
 
     def clear_input(self):
-        self.url.set('')  # Clear the input field
+        self.url.set('')  #清空输入
 
     def choose_download_directory(self):
-        self.download_directory = filedialog.askdirectory()  # Open a file dialog to choose the download directory
+        self.download_directory = filedialog.askdirectory()  # 选择下载目录
 
     def cancel_download(self):
         self.cancel_flag = True
@@ -178,7 +176,7 @@ class VideoPlayerApp:
             self.update_progress_bar(0)
             self.cancel_flag = False
 
-            # Start the download
+            # 下载视频
             output_dir = self.download_directory
             subprocess.run(['you-get', '-o', output_dir, video_url])
 

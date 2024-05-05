@@ -6,19 +6,21 @@ def song_download(url, title, author):
     print("True")
     path = '{}.mp3'.format(title)
     print('歌曲:{0}-{1},正在下载...'.format(title, author))
-    # 下载(这种适合少量文件下载)
+    # 下载
     content = requests.get(url).content
     cleaned_title = clean_filename(title)
     cleaned_author = clean_filename(author)
     with open(file=cleaned_title + cleaned_author + '.mp3', mode='wb') as f:
         f.write(content)
-    print('下载完毕,{0}-{1},请试听'.format(title, author))
+    print('下载完毕,{0}-{1},请查看!'.format(title, author))
 
 
 def clean_filename(filename):
     cleaned_filename = re.sub(r'[^\w-]', '', filename)
     return cleaned_filename
 
+
+import requests
 
 def get_music_name():
     while True:
@@ -42,6 +44,7 @@ def get_music_name():
         }
         res = requests.post(url=url, data=param, headers=headers)
         json_text = res.json()
+
 
         title = jsonpath.jsonpath(json_text, '$..title')
         author = jsonpath.jsonpath(json_text, '$..author')
