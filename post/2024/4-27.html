@@ -10,26 +10,27 @@
 <body>
     <div class="content">
       <div class="topBar">
-        <span class="topBarText">Python练手项目</span>
+        <span class="topBarText">Python音乐爬虫</span>
       </div>
       <div class="links">
-        <span class="link">Python练手项目</span>
-        <span class="link">我把之前写的一些Python练手项目整理到了这里,如果有需要可以自行借鉴.<br>注:使用时必须遵守中华人民共和国相关法律法规,禁止滥用,作者不对任何使用者负责.</span>
-        <span class="link">一共五个脚本:搜寻字符串脚本,图片格式转换脚本,视频自动解析脚本,通用音乐下载脚本,网易音乐下载脚本.以下是原文件:<br>
+        <span class="link">Python音乐爬虫</span>
+        <span class="link">我把我之前写的两个Python音乐爬虫整理到了这里,如果有需要可以自行借鉴使用.<br>注:使用时必须遵守中华人民共和国相关法律法规,禁止滥用,作者不对任何使用者负责.</span>
+        <span class="link">这两个脚本分别是:通用音乐下载脚本,网易音乐下载脚本.以下是原文件:<br>
             <a href="../../code/2024/4-27/music.py">通用音乐下载脚本</a>&nbsp;,
             <a href="../../code/2024/4-27/netease-music.py">网易音乐下载脚本</a>&nbsp;,
-            <a href="../../code/2024/4-27/photo.py">图片格式转换脚本</a>&nbsp;,
-            <a href="../../code/2024/4-27/search.py">搜寻字符串脚本</a>&nbsp;,
-            <a href="../../code/2024/4-27/video.py">视频自动解析脚本</a>&nbsp;.
             <a href="../../code/2024/4-27/code.txt"><br>(点击这里在线预览所有代码)</a>.
         </span>
-        <span class="link">这些脚本用途也都写在名字上了,主要说说注意事项:<br>
-            1.这个视频解析目前问题较大,很多解析网站都不能用,目前就一个可以用,并且随时会失效.<br>
+        <span class="link">下面为使用时的注意事项:<br>
+            1.在运行这些脚本之前请确保您的python环境已经安装了对应的第三方模块,这两个脚本使用了requests,jsonpath,beautifulsoup4这三个模块,如果您没有安装对应的模块,那么您可以使用以下命令安装:<br>
+            pip install requests&nbsp;&nbsp;&nbsp;,<br>
+            pip install jsonpath-rw&nbsp;&nbsp;&nbsp;,<br>
+            pip install beautifulsoup4&nbsp;&nbsp;&nbsp;,<br>
+            注:如果您的python环境中没有安装pip,那么请您自行安装pip,否则您将无法安装这些第三方模块!<br>
+            您需要在您的操作系统的命令行界面中运行这三条命令来安装对应第三方模块.<br>
             2.这些脚本的编写与调试均在Windows操作系统下完成,使用其它操作系统运行这些脚本可能会出现各种问题.<br>
-            3.网易音乐下载脚本的输入的网址链接中不能带"#"号,得去掉,否则这个脚本将会报错.<br>
+            3.网易音乐下载脚本的输入的网址链接中不能带"/#"部分,请您自行删减,否则这个脚本将会报错.<br>
             4.编写脚本时我所使用的python版本是3.12.0,使用其它更低版本运行这些脚本可能会有各种问题.<br>
-            5.如果您想要运行它们,但是没有对应模块运行不了,那么我也做了这五个脚本用到的所有第三方模块的安装脚本(WindowsBat脚本):<a href="../../code/2024/4-27/install.bat">install.bat</a>,使用Windows系统的用户直接下载运行就行(前提是要有python环境),
-            其它系统的用户可以自行改成适合该系统的安装脚本(这些模块都是用pip安装的,因此也可以直接在命令行输入安装命令安装).</span>
+            5.这些脚本仅供学习交流使用,请勿用于其它非法用途,否则一切后果都将由您自行承担!</span>
         <span class="link">本篇到此结束,感谢您能看到这里!</span>
         </span>
       </div>
