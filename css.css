@@ -63,7 +63,7 @@ body {
   
 .links {
     width: 100%;
-    max-height: 500px;
+    max-height: 35rem;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@ body {
     text-decoration: none;
     color: #000000;
     margin: 10px;
-    font-size: 18px;
+    font-size: 1.125rem;
     max-inline-size: 97%; /* 仅限制左右方向的最大尺寸 */
     margin-right: 10px;
 }
