@@ -1,4 +1,3 @@
-// 显示弹窗
 window.onload = function() {
     var modal = document.createElement('div');
     modal.classList.add('modal');
@@ -7,9 +6,8 @@ window.onload = function() {
     modal.style.display = 'block';
     setTimeout(function() {
       modal.style.display = 'none';
-    }, 7000); // 7秒后自动隐藏
+    }, 7000); 
   };
-// 使用 setTimeout 函数在页面加载后经过 7 秒自动跳转到指定页面
 setTimeout(function() {
-      window.location.href = 'https://al2so43.github.io/website'; // 替换为您要跳转的页面地址
-  }, 7000); // 7秒后跳转
+      window.location.href = 'https://al2so43.github.io/website'; 
+  }, 7000); 
