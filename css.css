@@ -60,6 +60,7 @@ body {
 }
 .bottomBarText a {
     font-size: 0.93rem; 
+    text-decoration: none;
 }
   
 .links {
